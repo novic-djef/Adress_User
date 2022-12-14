@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Novic Djef\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add nativewind
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\Novic Djef\AppData\Local\Android\android-sdk;C:\Users\Novic Djef\AppData\Roaming\capacitor\Config;C:\Program Files\nodejs;C:\ProgramData\ComposerSetup\bin;C:\PHP8;C:\Users\Novic Djef\AppData\Roaming\npm;C:\Program Files\nodejs\node_modules\npm;C:\Users\Novic Djef\AppData\Local\Android\android-sdk\emulator;C:\Users\Novic Djef\AppData\Local\Android\android-sdk\platform-tools;C:\Users\Novic Djef\AppData\Local\capacitor;C:\Program Files\Android\Android Studio;C:\Program Files\Android\Android Studio1;C:\Windows\System32\wbem;C:\Program Files\Git\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files (x86)\Java\jre1.8.0_271\bin;C:\Users\Novic Djef\AppData\Local\Programs\Microsoft VS Code\bin;C:\PHP8;C:\Users\Novic Djef\AppData\Roaming\Composer\vendor\bin;C:\xampp\php;C:\Users\Novic Djef\AppData\Local\Android\android-sdk\platform-tools;C:\Users\Novic Djef\AppData\Local\Android\android-sdk\tools;C:\Users\Novic Djef\AppData\Roaming\npm;C:\Users\Novic Djef\AppData\Local\Android\android-sdk\build-tools;C:\Program Files\nodejs;C:\Users\Novic Djef\AppData\Roaming\npm\node_modules\@angular\cli;C:\Users\Novic Djef\AppData\Roaming\npm\node_modules\@ionic\cli;C:\Program Files\Android\Android Studio1;C:\Users\Novic Djef\AppData\Local\atom\bin;D:\IntelliJ IDEA 2022.2.3\bin;;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect EHOSTUNREACH 104.16.21.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1157:16)
+
+npm manifest: 
+  {
+    "name": "adresse_clients",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web"
+    },
+    "dependencies": {
+      "expo": "~47.0.8",
+      "expo-status-bar": "~1.4.2",
+      "react": "18.1.0",
+      "react-dom": "^18.2.0",
+      "react-native": "0.70.5",
+      "react-native-web": "~0.18.7",
+      "tailwindcss": "^3.2.4",
+      "tailwindcss-react-native": "^1.7.10"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
