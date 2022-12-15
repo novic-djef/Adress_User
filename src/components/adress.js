@@ -2,12 +2,13 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ScrollView, Text, View, StyleSheet, TextInput, Image, FlatList } from 'react-native';
+import { ScrollView, Text, View, StyleSheet, TextInput, Image, FlatList, Button } from 'react-native';
 
 import {  ArrowLeftIcon, EllipsisVerticalIcon, MagnifyingGlassIcon, CheckIcon} from '@heroicons/react/24/outline';
 
 
-export default function Adress() {
+export default function Adress({navigation}) {
+  const goTo = () => navigation.navigate("AdressCreation");
     const adresses = [
         {
           id: 1,
@@ -40,8 +41,10 @@ export default function Adress() {
       ]
     return (
         <ScrollView className="m-2 px-2 bg-white border-gray-200 dark:border-gray-700">
+           <Button style={styles.container} onPress={goTo} title={`AdressCreation`} />
         <View  className="m-4 container flex-wrap justify-between ">
         < ArrowLeftIcon style={styles.icon} />
+       
           <Text style={{marginTop: -22,}} className=" m-2 flex justify-center items-center text-xl font-semibold whitespace-nowrap dark:text-black">Adresses</Text>
           <View className="inline-flex justify-center items-end ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="mobile-menu-2">
             <Text className="sr-only">Open main menu</Text>
@@ -240,6 +243,12 @@ export default function Adress() {
     }
     
     const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        backgroundColor: "azure",
+        alignItems: "center",
+        justifyContent: "center",
+      },
       icon: {
         width: 22,
         height: 22,
