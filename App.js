@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useWindowDimensions, ActivityIndicator, ScrollView, Text, View, StyleSheet, TextInput, Image, FlatList, Button } from 'react-native';
-import {  ArrowLeftIcon, EllipsisHorizontalIcon, MapPinIcon, MapIcon, ArrowPathIcon} from '@heroicons/react/24/outline';
+import {  ArrowLeftIcon, EllipsisHorizontalIcon, MapPinIcon, MapIcon} from '@heroicons/react/24/outline';
 import { NativeWindStyleSheet } from "nativewind";
 
 
@@ -15,17 +15,17 @@ NativeWindStyleSheet.setOutput({
 export default function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { width } = useWindowDimensions();
+  //const { width } = useWindowDimensions();
 
   const pickImages = async () => {
     // No permissions request is necessary for launching the image library
     setIsLoading(true);
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      // allowsEditing: true,
+       //allowsEditing: true,
       allowsMultipleSelection: true,
-      selectionLimit: 10,
-      aspect: [4, 3],
+      selectionLimit: 1,
+      
       quality: 1,
     });
     setIsLoading(false);
@@ -78,12 +78,11 @@ export default function App() {
             <ActivityIndicator size={"large"} />
           </View>
         ) : (
-          <Button className="flex justify-end items-end p-4 px-1 py-0.5 text-black-700/100 text-sm font-bold" title="choisir une image"  onPress={pickImages}>
-          <ArrowPathIcon style={styles.icon} />
-          </Button>
+          <Button   title="Choisir"  onPress={pickImages}/>
+          
         )
       }
-    />
+     />
 <Text style={{ position: 'relative', top: -16, marginTop:-90, right: -75, }} className=" hover:bg-slate-100 ...">
       <Text  className="flex p-4 px-1 py-0.5 text-black-700/100 text-sm font-bold">
      Choisir une photo
@@ -113,7 +112,7 @@ export default function App() {
         <Text className="flex p-4 px-1 py-0.5 text-black-700/100 text-sm font-bold">Choisir une Localisation</Text>
         <EllipsisHorizontalIcon style={{ position: 'relative', right: -310, top: -22, height: 27, width: 27, color: 'black'}} />
               <Image
-              className=" w-80 h-80 bg-gray-300 flex items-center justify-center border rounded-xl border-transparent "
+              className=" w-80 h-80  bg-gray-300 flex relative items-center justify-center border rounded-xl border-transparent "
               source={{
                 uri: 'https://th.bing.com/th/id/R.ffc627077e90286c6b4696f66d11cdd7?rik=Nxpoc454j53ijQ&pid=ImgRaw&r=0',
               }} 
